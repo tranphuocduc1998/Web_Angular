@@ -1,0 +1,33 @@
+<!-- <div class="modal-{{color}}">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{ title }}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div [innerHTML]="message"></div>
+      </div>
+      <div class="modal-footer">
+        <button *ngIf="showbtnCancel" type="button" class="btn btn-{{color}}"
+          (click)="decline()">{{ btnCancelText }}</button>
+        <button type="button" class="btn btn-{{color}}" (click)="accept()">{{ btnOkText }}</button>
+      </div>
+    </div>
+  </div> -->
+
+<div>
+  <div class="modal-header bg-{{color}}" style="padding-top: 0.5rem; padding-bottom: 0.5rem;">
+    <b class="modal-title pull-left">{{title}}</b>
+  </div>
+  <div class="modal-body">
+    <div [innerHTML]="message"></div>
+    <!-- <p>{{message}}</p> -->
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="confirm()">{{btnOkText}}</button>
+    <button type="button" *ngIf="showbtnOther" class="btn btn-info" (click)="info()">{{showbtnOther}}</button>
+    <button type="button" class="btn btn-danger" (click)="decline()" *ngIf="showbtnCancel">{{btnCancelText}}</button>
+  </div>
+</div>

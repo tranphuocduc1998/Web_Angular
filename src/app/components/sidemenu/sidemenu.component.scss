@@ -1,0 +1,15 @@
+app-sidemenu-component {
+    .list-group {
+        .list-group-item {
+            border: 1px solid white;
+            padding-left: 10px !important;
+        }
+        a {
+            font-size: 15px;
+        }
+
+        .list-group-item.active {
+            background-color: #0062cc !important;
+        }
+    }
+}

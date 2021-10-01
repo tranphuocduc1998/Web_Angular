@@ -1,0 +1,9 @@
+<div class="list-group">
+  <div *ngFor="let item of items">
+    <a *ngIf="item.loai_menu==='router'" class="list-group-item list-group-item-action text-light" [ngClass]="color"
+      [routerLink]="currentRoute + item.url" routerLinkActive="active">{{ item.name }}</a>
+
+    <a *ngIf="item.loai_menu==='link'" class="list-group-item list-group-item-action text-light" [ngClass]="color"
+      [href]="item.url" target="_blank">{{ item.name }}</a>
+  </div>
+</div>

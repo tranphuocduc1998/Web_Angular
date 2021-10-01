@@ -1,0 +1,42 @@
+app-tinlienquan {
+    .lienketwebsite {
+        background: url(/assets/Hinh/MD024/bg/left_bg.png) no-repeat scroll right center;
+    }
+
+    .scroller {
+        height: 400px;
+        overflow: hidden;
+
+        .inner {
+            animation: scroll 15s linear infinite;
+
+            li {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: #212529;
+            }
+
+            a:hover {
+                color: #007bff;
+                text-decoration: none;
+            }
+        }
+
+        .inner:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            margin-top: 40px;
+        }
+
+        100% {
+            margin-top: -770px;
+        }
+    }
+}

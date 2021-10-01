@@ -1,0 +1,49 @@
+<div class="col-12">
+    <div class="row">
+        <tabset>
+            <tab *ngFor="let item of tabs" [heading]="item.ten_chude">
+                <div class="row ml-0 mt-2">
+                    <div class="col-md-6" style="padding-left: 0px !important;">
+                        <img *ngIf="item.children[0]?.hinhanh_tieude" [src]="item.children[0]?.hinhanh_tieude"
+                            class="img-fluid"
+                            style="border-radius: 2px; float: left; height: 120px; width: 170px; margin-right: 10px; margin-bottom: 5px;">
+                        <h6 style="text-align: justify; font-size: 15px;"><a [href]="item.children[0]?.url_tieude">{{
+                                item.children[0]?.ten_tieude
+                                }}</a>
+                        </h6>
+                        <p style="text-align: justify; font-size: 15px;">{{ item.children[0]?.mota_tieude }}</p>
+
+                        <ul *ngIf="item.children.length > 0"
+                            style="list-style: outside none square; color: #ff7300; padding-left: 15px;">
+                            <div *ngFor="let i of item.children | slice:1; let index=index">
+                                <li *ngIf="i.ten_tieude && index < item.children.length/2" class="mb-1">
+                                    <a [href]="i.url_tieude" style="text-align: justify;">
+                                        {{ i.ten_tieude }}
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6" style="padding-left: 0px !important;">
+                        <ul *ngIf="item.children.length > 0" style="list-style: outside none square; color: #ff7300;">
+                            <div *ngFor="let i of item.children | slice:1; let index = index">
+                                <li *ngIf="i.ten_tieude && index >= item.children.length/2" class="mb-1">
+                                    <a [href]="i.url_tieude" style="text-align: justify;">
+                                        {{ i.ten_tieude }}
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+
+                        <ul style="list-style: none">
+                            <li>
+                                <a [href]="item.url_chude">Xem tất cả ...</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </tab>
+        </tabset>
+    </div>
+</div>

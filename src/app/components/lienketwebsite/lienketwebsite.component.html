@@ -1,0 +1,6 @@
+<div class="pl-3 text-light" [ngStyle]="titleStyle" [ngClass]="titleClass">
+    Liên kết website
+</div>
+<select class=" mt-1 form-control form-control-sm" [(ngModel)]="curentItem" (change)="onChange()" value="">
+    <option *ngFor="let item of items" [value]="item.url">{{ item.name }}</option>
+</select>

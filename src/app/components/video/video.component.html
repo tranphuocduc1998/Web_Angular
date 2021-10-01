@@ -1,0 +1,15 @@
+<div class="pl-3 text-light" [ngStyle]="titleStyle" [ngClass]="titleClass">
+    Video
+</div>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" [src]="curentUrl | safe"></iframe>
+</div>
+
+<perfect-scrollbar style="max-width: auto;" [config]="{suppressScrollX: true}">
+    <div class="list-group">
+        <a *ngFor="let item of items" [routerLink]="" class="list-group-item list-group-item-action pl-3" [id]="item.id" [class.text-primary] = "item.id === idOver" [class.text-info] = "item.id === curentId" 
+            (click)="onClick(item)" (mouseover)="onMouseOver(item.id
+        )">{{ item.mota }}</a>
+    </div>
+</perfect-scrollbar>

@@ -1,0 +1,49 @@
+app-tinnoibat {
+    .col-md-5 {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+
+        li {
+            border-bottom: 1px dotted #ddd;
+
+            a {
+                color: #212529;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+            a:active {
+                color: #007bff;
+                text-decoration: none;
+            }
+        }
+    }
+    li img {
+        width: 200px;
+    }
+
+    .text-block {
+        position: absolute;
+        bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .lienketwebsite {
+        background: url(/assets/Hinh/MD024/bg/left_bg.png) no-repeat scroll right center;
+    }
+}

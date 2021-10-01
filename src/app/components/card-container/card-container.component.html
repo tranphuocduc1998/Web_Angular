@@ -1,0 +1,25 @@
+<div class="row" *ngIf="cardData && cardData.length > 0">
+  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 p-0" *ngFor="let item of cardData">
+    <div class="card h150">
+      <div class="card-body">
+        <div class="d-flex flex-row fheight">
+          <div class="p-2 bd-highlight">
+            <div class="responsive-image" [ngClass]="!item.imgUrl && 'loading'">
+              <img *ngIf="item.imgUrl" [src]="item.imgUrl" />
+            </div>
+          </div>
+          <div class="d-flex flex-column bd-highlight flex-grow-1 box-content">
+            <div class="bd-highlight flex-grow-1 box-title">
+              <span class="title">{{item.title}}</span>
+              <span class="content">{{item.title}}</span>
+            </div>
+            <!-- <div class="bd-highlight">
+              <button type="button" class="btn btn-primary btn-sm" (click)="onCreate(item.idbang)">Thêm
+                mới</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

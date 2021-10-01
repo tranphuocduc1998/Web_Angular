@@ -1,0 +1,35 @@
+@import "~@circlon/angular-tree-component/css/angular-tree-component.css";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
+.success-snackbar {
+  background: #5cb85c;
+  color: #fff;
+}
+
+.danger-snackbar {
+  background: #ff0000;
+  color: #fff;
+}
+
+.info-snackbar {
+  background: #0069d9;
+  color: #fff;
+}
+
+.warning-snackbar {
+  background: #ffff00;
+  color: #000;
+}
+
+.card-header {
+  padding: 0.5rem 1.25 rem !important;
+}
+// note: thêm vào để hiện pagesize phân trang trên modal
+.cdk-overlay-container {
+  z-index: 1050 !important;
+}
+
+body {
+  padding: 0 !important;
+}

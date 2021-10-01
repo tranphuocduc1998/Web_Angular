@@ -1,0 +1,7 @@
+<div *ngFor="let image of images">
+    <a *ngIf="image.url && image.url !=='#'" [href]="image.url">
+        <img [src]="image.src" class="img-fluid" [title]="image.name" [url]="image.url">
+    </a>
+    <img *ngIf="!image.url || image.url == '#'" [src]="image.src" class="img-fluid" [title]="image.name"
+        [url]="image.url">
+</div>

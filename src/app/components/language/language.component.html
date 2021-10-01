@@ -1,0 +1,15 @@
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img [src]="currentlanguage.src" style="width: 25px; height: 15px;">
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="changeLanguage(item)" *ngFor="let item of languages"
+                [href]="router.url + '#'" [style]="'--item-hover-color:'+hoveredColor">
+                <img [src]="item.src" style="width: 25px; height: 15px;"> {{ item.name }}
+            </a>
+        </div>
+    </li>
+</ul>

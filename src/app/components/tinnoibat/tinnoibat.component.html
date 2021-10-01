@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-7">
+            <div *ngFor="let item of tintuc; let i = index"
+                style="position: relative; overflow: hidden; max-height: 300px;">
+                <img *ngIf="i == counter" [@slideInOut] [src]="tintuc[i].src" class="img-fluid img-custom">
+                <div *ngIf="i == counter" [@slideUpDown] class="text-block" style="position: absolute;">
+                    <p>{{ tintuc[i].title }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="bg-primary text-light lienketwebsite text-center pt-1 pb-1">
+                TIN NỔI BẬT
+            </div>
+            <div>
+                <ul>
+                    <li *ngFor="let image of tintuc; let i = index" class="pt-1 pb-1" (mouseover)="imageHover(i)">
+                        <a *ngIf="image.url" [href]="router.url + '/' + image.url"
+                            [ngStyle]="{'color':(i == counter) ? '#007bff':'#212529' }">{{ image.title }}</a>
+                        <a *ngIf="!image.url" href="#" [ngStyle]="{'color':(i == counter) ? '#007bff':'#212529' }">{{
+                            image.title }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

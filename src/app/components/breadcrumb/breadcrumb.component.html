@@ -1,0 +1,17 @@
+<nav aria-label="breadcrumb" *ngIf="breadcrumbs && breadcrumbs.length > 1">
+    <ol class="breadcrumb">
+        <!-- <li> <i class="fa fa-home"> </i> </li> -->
+        <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs; let last = last; let first = first">
+            <a *ngIf="first" routerLink="{{currentRoute + breadcrumb.url}}">
+                <i class="fa fa-home"></i> {{ breadcrumb.label }}
+            </a>
+
+            <a *ngIf="!first && !last" routerLink="{{currentRoute + breadcrumb.url}}">
+                {{ breadcrumb.label }}
+            </a>
+            <a *ngIf="last">
+                {{ breadcrumb.label }}
+            </a>
+        </li>
+    </ol>
+</nav>
